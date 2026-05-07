@@ -7,8 +7,6 @@ Le terme « sommaire » étant ambigu, le projet répond aux **deux interprétat
 - **Sommaire de contenu** (résumé synthétique) — `summarize_arxiv.py`
 - **Sommaire structurel** (table des matières) — `extract_toc_arxiv.py`
 
-Ce dépôt est un POC réalisé sur une demi-journée de travail dans le cadre d'un cas d'usage technique. Il privilégie la **clarté du raisonnement** sur l'exhaustivité du code. Le document `methodologie.md` détaille la démarche, le choix des approches, l'évaluation et les limites assumées.
-
 ---
 
 ## Aperçu de l'approche
@@ -33,18 +31,6 @@ Cascade de trois stratégies par ordre de confiance :
 1. **Bookmarks PDF natifs** (`fitz.get_toc()`).
 2. **Détection par numérotation** (regex sur les en-têtes du type `1. Introduction`, `2.1 Related Work`).
 3. **Détection par taille de police** (heuristique typographique, fallback).
-
----
-
-## Installation
-
-```bash
-git clone https://github.com/<votre-pseudo>/arxiv-paper-summary.git
-cd arxiv-paper-summary
-pip install -r requirements.txt
-```
-
-Python 3.10+ recommandé.
 
 ---
 
@@ -121,7 +107,3 @@ Voir [`methodologie.md`](./methodologie.md) pour le document détaillé :
 - Containeriser et industrialiser pour un volume cible.
 
 ---
-
-## Auteur
-
-Nikola Kostadinovic — Data Scientist & Chef de projet IA
